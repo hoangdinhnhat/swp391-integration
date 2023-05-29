@@ -1,0 +1,245 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(244, 244, 244);
+}
+
+.container {
+  width: var(--width);
+  padding: 20px 0;
+  margin-bottom: 50px;
+}
+
+.shop_container {
+  width: var(--width);
+  display: flex;
+  align-items: center;
+  padding: 30px 0;
+  background-color: white;
+}
+
+.shop-left_content {
+  display: flex;
+  padding: 30px 0;
+  width: 500px;
+  justify-content: center;
+  align-items: center;
+}
+
+.shop_avatar img {
+  width: 90px;
+}
+
+.shop-info {
+  margin-left: 30px;
+}
+
+.shop-name {
+  font-size: 2rem;
+}
+
+.shop-active {
+  margin-bottom: 10px;
+  span {
+    font-size: 1.2rem;
+    color: #0000008a;
+  }
+}
+
+.shop-interact {
+  .shop-chat {
+    margin-right: 5px;
+    padding: 4px 15px;
+    font-size: 1.4rem;
+    outline: none;
+    border: 1px solid var(--primary);
+    background-color: transparent;
+
+    .icon-chat {
+      margin-right: 5px;
+      color: var(--primary);
+    }
+
+    span {
+      color: var(--primary);
+    }
+  }
+
+  .shop-follow {
+    padding: 4px 15px;
+    font-size: 1.4rem;
+    outline: none;
+    border: 1px solid var(--primary);
+    background-color: transparent;
+
+    .icon-follow {
+      margin-right: 5px;
+      color: var(--primary);
+    }
+
+    span {
+      color: var(--primary);
+    }
+  }
+}
+
+.right-content {
+  width: 700px;
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 100px;
+  row-gap: 15px;
+
+  .shop-totalProducts,
+  .shop-totalFollowers,
+  .shop-totalRating,
+  .shop-totalResponseRate {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+
+    .icon {
+      margin: 0 10px;
+    }
+
+    .name {
+      font-size: 1.4rem;
+    }
+
+    .number {
+      margin-left: 15px;
+      color: var(--primary);
+    }
+  }
+}
+
+//Shop Navbar
+.shop_navbar {
+  width: var(--width);
+  height: 80px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #fff;
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  .nav-button {
+    padding: 24px 60px;
+    font-size: 1.8rem;
+    border: none;
+    outline: none;
+    background-color: transparent;
+  }
+
+  .nav-button-active {
+    padding: 24px 60px;
+    font-size: 1.8rem;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: var(--primary);
+    border-bottom: 5px solid var(--primary);
+  }
+}
+
+//Products
+.rec-title {
+  padding-bottom: 30px;
+
+  span {
+    font-size: 1.8rem;
+    color: #0000008a;
+  }
+}
+
+.shop-products {
+  width: var(--width);
+  position: relative;
+}
+
+.product-list {
+  width: var(--width);
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  column-gap: 15px;
+  row-gap: 15px;
+}
+
+.product_items {
+  width: 228px;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  text-decoration: none;
+  color: #333;
+  background-color: #fff;
+  transition: 0.1s ease;
+
+  &:hover {
+    color: #333;
+    transform: translateY(-5px);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  }
+}
+
+.product-img {
+  width: 95%;
+  height: 55%;
+  margin-top: 10px;
+}
+
+.content {
+  padding: 15px 10px;
+
+  .product-name {
+    width: 100%;
+    height: 63px;
+    font-size: 1.4rem;
+    word-wrap: break-word;
+    white-space: normal;
+    overflow: hidden;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+
+  .product-price {
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+
+    .real-price {
+      margin-right: 15px;
+      font-size: 1.4rem;
+      text-decoration: line-through;
+      color: #0000008a;
+    }
+
+    .sale-price {
+      font-size: 1.8rem;
+      color: var(--primary);
+    }
+  }
+
+  .rating_sold {
+    margin-top: 13px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .rating {
+      .rate_icon {
+        font-size: 1.2rem;
+        color: gold;
+      }
+    }
+    .sold {
+      padding-right: 20px;
+      font-size: 1.2rem;
+      color: #000000de;
+    }
+  }
+}

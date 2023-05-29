@@ -1,0 +1,21 @@
+.cart-container {
+    width: var(--width);
+    margin: 0 auto;
+}
+
+.cart-header {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    margin-top: 30px;
+    background-color: aqua;
+}
+
+.cart-header div {
+    text-align: center;
+}
+
+.item-1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}

@@ -1,0 +1,38 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  
+}
+
+
+.header-content {
+  width: var(--width);
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.link {
+  width: 13%;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+
+.text {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.sub-text{
+  font-size: 3.4rem;
+  color: var(--primary);
+}
+
+.inner-subText {
+  color: #333;
+}

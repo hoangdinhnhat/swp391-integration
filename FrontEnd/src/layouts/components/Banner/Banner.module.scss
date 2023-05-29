@@ -1,0 +1,48 @@
+// ---------BANNER---------
+
+.banner {
+  width: 100%;
+  height: 380px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.banner-slider {
+  flex-basis: 65%;
+  height: 100%;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.banner-right {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-basis: 34%;
+  height: 100%;
+}
+
+.banner-item-1 {
+  width: 100%;
+  height: 48.5%;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.banner-item-2 {
+  width: 100%;
+  height: 48.5%;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
