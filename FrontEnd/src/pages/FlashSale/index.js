@@ -1,1 +1,1 @@
-export { default } from './FlashSale'
+export {default} from './FlashSale'

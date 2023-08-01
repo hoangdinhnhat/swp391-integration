@@ -1,0 +1,135 @@
+
+.product-img {
+  width: 480px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+
+
+  .main_img {
+    width: 450px;
+    height: 450px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    position: relative;
+
+    .sold-out {
+      opacity: 1;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: opacity 0.2s linear 0.5s;
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      font-size: 2rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      background-color: rgba(0, 0, 0, .8);;
+    }
+  }
+
+  .main-video {
+    max-width: 450px;
+    min-width: 450px;
+    max-height: 450px;
+    min-height: 450px;
+    background-color: white !important;
+    position: relative;
+
+    .sold-out {
+      opacity: 1;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: opacity 0.2s linear 0.5s;
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      font-size: 2rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      background-color: rgba(0, 0, 0, .8);;
+    }
+  }
+
+  .product_img-list {
+    min-width: 450px;
+    height: 100px;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: hidden;
+
+    .video {
+      position: relative;
+
+      .video-desc {
+        cursor: pointer;
+        max-width: 82px;
+        min-width: 82px;
+        max-height: 82px;
+        min-height: 82px;
+        border: 2px solid transparent;
+        background-color: white !important;
+      }
+
+      .video-desc-hover {
+        cursor: pointer;
+        max-width: 82px;
+        min-width: 82px;
+        max-height: 82px;
+        min-height: 82px;
+        border: 2px solid red;
+        background-color: white !important;
+      }
+
+      .svg-icon {
+        cursor: pointer;
+        width: 32px;
+        height: 32px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .img-desc {
+      cursor: pointer;
+      max-width: 82px;
+      min-width: 82px;
+      height: 82px;
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      border: 2px solid transparent;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-size: cover;
+    }
+
+    .img-desc-hover {
+      cursor: pointer;
+      width: 82px;
+      height: 82px;
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      border: 2px solid red;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-size: cover;
+    }
+  }
+}

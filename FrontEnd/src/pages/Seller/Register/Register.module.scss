@@ -1,0 +1,284 @@
+.register_wrapper {
+  width: 100%;
+  height: 900px;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(244, 244, 244);
+
+  .register_container {
+    width: var(--width);
+    height: 520px;
+    padding: 0 24px;
+    margin: 30px 0;
+    background-color: #fff;
+
+    .register_form {
+      .form-header {
+        padding: 24px 0;
+        border-bottom: 1px solid #e6e5e5;
+
+        .text {
+          font-size: 2rem;
+          color: var(--primary);
+        }
+      }
+
+      .form-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+        margin-bottom: 30px;
+
+        .form-register {
+          .shop-name {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+
+            .name {
+              width: 125px;
+              padding: 8px 0;
+              margin-right: 16px;
+
+              .required {
+                color: red;
+              }
+            }
+
+            .name-input {
+              position: relative;
+
+              .input {
+                border-radius: 3px;
+                outline: none;
+                width: 400px;
+                padding: 6px 12px;
+                font-size: 1.4rem;
+                border: 1px solid #eee;
+                transition: 0.25s ease;
+
+                &:focus {
+                  border-color: var(--primary);
+                }
+
+                ::-webkit-input-placeholder {
+                  font-size: 1.4rem;
+                }
+              }
+
+              .input-error {
+                border-radius: 3px;
+                outline: none;
+                width: 400px;
+                padding: 6px 12px;
+                font-size: 1.4rem;
+                border: 1px solid red;
+                transition: 0.25s ease;
+
+                ::-webkit-input-placeholder {
+                  font-size: 1.4rem;
+                }
+              }
+
+              .error {
+                padding-top: 5px;
+                font-size: 1.2rem;
+                color: red;
+              }
+            }
+          }
+
+          .shop-address {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+
+            .name {
+              width: 125px;
+              padding: 8px 0;
+              margin-right: 16px;
+
+              .required {
+                color: red;
+              }
+            }
+
+            .add {
+              .add-detail {
+                font-size: 1.4rem;
+              }
+
+              .add-btn {
+                width: 70px;
+                height: 32px;
+                outline: none;
+                border-radius: 3px;
+                font-size: 1.4rem;
+                color: #8a8888;
+                border: 1px solid #b6b4b4;
+                background-color: transparent;
+
+                &:disabled {
+                  cursor: not-allowed;
+
+                  &:hover {
+                    color: #8a8888;
+                    border: 1px solid #b6b4b4;
+                  }
+                }
+
+                &:hover {
+                  border: 1px solid var(--primary);
+                  color: var(--primary);
+                }
+
+                .icon-add {
+                  margin-right: 5px;
+                }
+              }
+            }
+          }
+
+          .shop-email {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+
+            .name {
+              width: 125px;
+              padding: 8px 0;
+              margin-right: 16px;
+
+              .required {
+                color: red;
+              }
+            }
+
+            .email-input {
+              .input {
+                border-radius: 3px;
+                outline: none;
+                width: 400px;
+                padding: 6px 12px;
+                font-size: 1.4rem;
+                transition: 0.25s ease;
+                border: 1px solid #eee;
+
+                &:focus {
+                  border-color: var(--primary);
+                }
+
+                ::-webkit-input-placeholder {
+                  font-size: 1.4rem;
+                }
+
+                &:disabled {
+                  cursor: not-allowed;
+                }
+              }
+
+              .input-error {
+                border-radius: 3px;
+                outline: none;
+                width: 400px;
+                padding: 6px 12px;
+                font-size: 1.4rem;
+                transition: 0.25s ease;
+                border: 1px solid red;
+
+                &:focus {
+                  border-color: var(--primary);
+                }
+
+                ::-webkit-input-placeholder {
+                  font-size: 1.4rem;
+                }
+
+                &:disabled {
+                  cursor: not-allowed;
+                }
+              }
+
+              .error {
+                padding-top: 5px;
+                font-size: 1.2rem;
+                color: red;
+              }
+            }
+          }
+
+          .shop-phone {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+
+            .name {
+              width: 125px;
+              padding: 8px 0;
+              margin-right: 16px;
+
+              .required {
+                color: red;
+              }
+            }
+
+            .phone-input {
+              position: relative;
+
+              .input {
+                border-radius: 3px;
+                outline: none;
+                width: 400px;
+                padding: 6px 12px;
+                font-size: 1.4rem;
+                transition: 0.25s ease;
+                color: #868585;
+                border: 1px solid #eee;
+
+                &:focus {
+                  border-color: var(--primary);
+                }
+
+                ::-webkit-input-placeholder {
+                  font-size: 1.4rem;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .form-footer {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 24px 0 0 0;
+        border-top: 1px solid #e6e5e5;
+
+        .save {
+          margin-right: 30px;
+
+          .save-btn {
+            width: 110px;
+            height: 40px;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            color: #fff;
+            background-color: var(--primary);
+
+            &:disabled {
+              cursor: not-allowed;
+              opacity: 0.7;
+            }
+
+            .save-icon {
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,18 +1,25 @@
-import React, { useContext, useEffect, useState } from "react";
 import classNames from "classnames/bind";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 import Tippy from "@tippyjs/react/headless";
-import avatar from "~/assets/images/user.png";
+import { Wrapper as PopperWrapper } from "~/components/Popper";
 import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
-import { Wrapper as PopperWrapper } from "~/components/Popper";
+
+import { UserContext } from "~/userContext/Context";
+import CartDropdown from "../CartDropdown/CartDropdown";
+import Search from "~/layouts/components/Header/Search";
+import Notifications from "../NotificationsDropdown";
+
+import avatar from "~/assets/images/user.png";
 import styles from "./Header.module.scss";
-import { UserContext } from "~/App";
-import axios from "axios";
+
 const cx = classNames.bind(styles);
 
 const Header = () => {
-  const user = useContext(UserContext);
+  const context = useContext(UserContext);
+  const user = context.state;
   const [logout, setLogout] = useState(false);
   useEffect(() => {
     if (logout) {
@@ -31,6 +38,10 @@ const Header = () => {
     setLogout(true);
   };
 
+  const roundedFloat = (float) => {
+    return Math.round((float + Number.EPSILON) * 100) / 100;
+  };
+
   return (
     <>
       <div className={cx("header")}>
@@ -43,20 +54,10 @@ const Header = () => {
               </span>
             </p>
           </Link>
-          <div className={cx("search-container")}>
-            <form action="" className={cx("search-bar")}>
-              <input
-                type="text"
-                placeholder="Search your product from here"
-              ></input>
-              <button type="submit">
-                <i className={cx("fa-regular fa-magnifying-glass")}></i>
-              </button>
-            </form>
-          </div>
+          <Search />
           <div className={cx("options-content")}>
             <div className={cx("option")}>
-              <Link className={cx("option-link")} to="/shop">
+              <Link className={cx("option-link")} to="/products">
                 Products
               </Link>
             </div>
@@ -71,17 +72,12 @@ const Header = () => {
               </Link>
             </div>
           </div>
-          <div className={cx("cart-icon")}>
-            <span className={cx("counter", "disable")}>22</span>
-            <Link to="/cart" className={cx("cart-link")}>
-              <i className={cx("icon", "fa-light fa-cart-shopping")}></i>
-            </Link>
+          <div className={cx("cart")}>
+            <CartDropdown />
           </div>
 
           <div className={cx("notification-icon")}>
-            <Link to="/user/notifications" className={cx("notify-link")}>
-              <i className={cx("icon", "fa-light fa-bell")}></i>
-            </Link>
+            <Notifications />
           </div>
 
           <div className={cx("nav-icon")}>
@@ -108,7 +104,7 @@ const Header = () => {
                         </Link>
                       </div>
                       <div className={cx("option-next")}>
-                        <Link to="/" className={cx("login-link")}>
+                        <Link to="/purchase/all" className={cx("login-link")}>
                           <span>My purchase</span>
                           <i
                             className={cx(
@@ -119,10 +115,30 @@ const Header = () => {
                         </Link>
                       </div>
                       <div className={cx("option-next")}>
-                        <Link to="/" className={cx("login-link")}>
-                          <span>Seller</span>
+                        <Link
+                          to="/user/notification"
+                          className={cx("login-link")}
+                        >
+                          <span>Notifications</span>
+                          <i className={cx("icon-sub", "fa-light fa-bell")}></i>
+                        </Link>
+                      </div>
+                      <div className={cx("option-next")}>
+                        <Link to="/seller" className={cx("login-link")}>
+                          <span>Seller Centre</span>
                           <i
-                            className={cx("icon-sub", "fa-light fa-circle-dollar")}
+                            className={cx(
+                              "icon-sub",
+                              "fa-light fa-circle-dollar"
+                            )}
+                          ></i>
+                        </Link>
+                      </div>
+                      <div className={cx("option-next")}>
+                        <Link to="#" className={cx("login-link")}>
+                          <span>Wallet: ${roundedFloat(user.wallet)}</span>
+                          <i
+                            className={cx("icon-sub", "fa-regular fa-coins")}
                           ></i>
                         </Link>
                       </div>

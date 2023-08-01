@@ -1,0 +1,76 @@
+.container {
+  width: 100%;
+  display: flex;
+  margin-top: 71px;
+}
+
+.sidebar {
+  width: 198px;
+}
+
+.product-container {
+  width: calc(100% - 198px);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #f6f6f6;
+  font-size: 16px;
+}
+
+.nav-bar {
+  background-color: #fff;
+}
+
+.product-table {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.row-status {
+  background-color: red;
+  color: #f1bba7;
+}
+
+.banned-status {
+  width: 100px;
+  margin: 0;
+  font-size: 15px;
+  background-color: #ffe1e1;
+  border-radius: 3px;
+  border: 0.5px solid red;
+  color: red;
+  text-align: center;
+  padding: 3px 0;
+}
+
+.input-search {
+  display: flex;
+  justify-content: end;
+}
+
+.skw {
+  width: 500px;
+  height: 40px;
+  font-size: 1.4rem;
+  padding: 0 12px;
+  border-radius: 0 4px 4px 0;
+  outline: none;
+  border: 1px solid #e5e5e5;
+  margin-bottom: 30px;
+}
+
+.product-img {
+  width: 65px;
+}
+
+.recover-btn {
+  width: 100px;
+  padding: 3px;
+  border: none;
+  background-color: rgb(57, 151, 77);
+  color: white;
+  border-radius: 3px;
+  text-align: center;
+  font-weight: 500;
+}

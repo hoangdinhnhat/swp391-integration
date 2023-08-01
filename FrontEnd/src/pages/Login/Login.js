@@ -1,13 +1,13 @@
 import classNames from "classnames/bind";
-import { useEffect, useState } from "react";
 import * as React from "react";
+import { useEffect, useState } from "react";
 import Backdrop from "@mui/material/Backdrop";
 import CircularProgress from "@mui/material/CircularProgress";
 // import Button from "@mui/material/Button";
 import axios from "axios";
 import Alert from "react-bootstrap/Alert";
 import { Link, useNavigate } from "react-router-dom";
-import { googleLogout, useGoogleLogin } from "@react-oauth/google";
+import { useGoogleLogin } from "@react-oauth/google";
 
 import Footer from "~/layouts/components/Footer";
 import HeaderForm from "~/layouts/components/HeaderForm";
@@ -34,6 +34,10 @@ function Login() {
   });
 
   useEffect(() => {
+    document.title = "Login now to start shopping! | Bird Trading Platform";
+  }, []);
+
+  useEffect(() => {
     if (user) {
       axios
         .get(
@@ -50,7 +54,14 @@ function Login() {
             .post("/api/v1/auths/google", res.data)
             .then((res) => {
               setMsg("");
-              window.location.href = "/"
+              let redirectUrl = "/";
+              if (res.data.role === "ADMIN") {
+                redirectUrl = "/admin/portal/dashboard";
+              } else if (res.data.role === "SHIPPING_UNIT") {
+                redirectUrl = "/shipping-unit";
+              }
+
+              window.location.href = redirectUrl;
               console.log(res.data);
             })
             .catch((e) => {
@@ -68,8 +79,15 @@ function Login() {
         .post("/api/v1/auths/authentication", request)
         .then((res) => {
           setMsg("");
-          window.location.href = "/"
-          console.log(res.data);
+          let redirectUrl = "/";
+          if (res.data.role === "ADMIN") {
+            redirectUrl = "/admin/portal/dashboard";
+          } else if (res.data.role === "SHIPPING_UNIT") {
+            redirectUrl = "/shipping-unit";
+          }
+
+          window.location.href = redirectUrl;
+          console.log(res.data, redirectUrl);
         })
         .catch((e) => {
           setMsg(e.response.data.message);
@@ -100,6 +118,17 @@ function Login() {
     }
   }, [request.email, request.password]);
 
+  useEffect(() => {
+    const regex = /[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,8}(.[a-z{2,8}])?/g;
+    if (request.email && !regex.test(request.email)) {
+      setDisabled(true);
+      setMsg("Email not valid!");
+    } else {
+      setDisabled(false);
+      setMsg("");
+    }
+  }, [request.email]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setOpen(true);
@@ -121,7 +150,7 @@ function Login() {
 
   return (
     <>
-      <HeaderForm />
+      <HeaderForm text="Login" />
       {!isLogin && (
         <div className={cx("container")}>
           <div className={cx("content")}>
@@ -134,8 +163,9 @@ function Login() {
                   <input
                     type="text"
                     className={cx("email")}
-                    onChange={(e) =>
-                      setRequest({ ...request, email: e.target.value })
+                    spellCheck={false}
+                    onBlur={(e) =>
+                      setRequest({ ...request, email: e.target.value.trim() })
                     }
                     required
                   />

@@ -1,1 +1,1 @@
-export { default } from './ModalFail.js'
+export {default} from './ModalFail.js'

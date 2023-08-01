@@ -1,0 +1,109 @@
+.setting_wrapper {
+  width: 100%;
+  height: calc(100vh - 71px);
+  display: flex;
+  margin-top: 71px;
+
+  .setting_sidebar {
+    width: 198px;
+  }
+
+  .setting_container {
+    width: calc(100% - 198px);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #f6f6f6;
+
+    .setting-content {
+      width: var(--width);
+      height: 95%;
+      margin-top: 20px;
+
+      .setting-header {
+        width: 100%;
+        height: 76px;
+        padding: 20px 30px;
+        border-bottom: 1px solid #e5e5e5;
+        background-color: #fff;
+
+        .setting-icon {
+          margin-right: 10px;
+          font-size: 2.3rem;
+        }
+
+        .text {
+          font-size: 2.3rem;
+          font-weight: 500;
+        }
+      }
+
+      .setting-content_main {
+        width: 100%;
+        height: calc(100% - 166px);
+        margin-top: 20px;
+        padding: 30px;
+        background-color: #fff;
+
+        .setting-list-item {
+          display: grid;
+          grid-template-columns: auto auto;
+          justify-content: center;
+          column-gap: 200px;
+          row-gap: 100px;
+          margin-top: 50px;
+
+          .setting-item {
+            width: 100%;
+            display: flex;
+            align-items: center;
+
+            .edit-setting {
+              margin-left: 15px;
+
+              .input {
+                width: 40px;
+                padding: 2px 5px;
+                font-size: 1.5rem;
+                text-align: center;
+                outline: none;
+                border: none;
+                border-bottom: 2px solid #333;
+              }
+
+              input:focus {
+                border-bottom: 2px solid var(--primary);
+              }
+            }
+          }
+
+          .flashSale {
+            .text {
+              margin-right: 15px;
+            }
+          }
+        }
+      }
+
+      .setting-footer {
+        width: 100%;
+        margin-top: 20px;
+        padding: 10px 30px;
+        display: flex;
+        justify-content: flex-end;
+        background-color: #fff;
+
+        .save-btn {
+          width: 100px;
+          height: 32px;
+          border-radius: 4px;
+          outline: none;
+          border: 1px solid var(--primary);
+          color: #fff;
+          background-color: var(--primary);
+
+        }
+      }
+    }
+  }
+}

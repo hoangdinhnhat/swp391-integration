@@ -1,0 +1,203 @@
+.report-product {
+  padding: 0 20px;
+
+  .report-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #f6f6f6;
+
+    .user {
+      width: 250px;
+      text-align: center;
+    }
+
+    .order {
+      width: 180px;
+      text-align: center;
+    }
+
+    .desc {
+      width: 450px;
+      text-align: center;
+    }
+
+    .shipping {
+      width: 200px;
+      text-align: center;
+    }
+
+    .actions {
+      width: 150px;
+      text-align: center;
+    }
+  }
+
+  .report-list {
+    .report-item {
+      height: 77px;
+      display: flex;
+      align-items: center;
+      padding: 16px 15px;
+      margin-top: 20px;
+      font-size: 1.5rem;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+      .rp-user {
+        width: 250px;
+        display: flex;
+        align-items: center;
+
+        .avatar-user {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+        }
+
+        .user-name {
+          width: 100px;
+          margin-left: 10px;
+          word-wrap: break-word;
+          white-space: normal;
+          overflow: hidden;
+          display: -webkit-box;
+          text-overflow: ellipsis;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 1;
+        }
+      }
+
+      .rp-order {
+        width: 180px;
+
+        .text {
+          text-align: center;
+          word-wrap: break-word;
+          white-space: normal;
+          overflow: hidden;
+          display: -webkit-box;
+          text-overflow: ellipsis;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 1;
+        }
+      }
+
+      .rp-desc {
+        cursor: pointer;
+        width: 450px;
+        display: flex;
+        align-items: center;
+
+        .product-img {
+          width: 40px;
+          height: 40px;
+        }
+
+        .product-name {
+          margin-left: 10px;
+          word-wrap: break-word;
+          white-space: normal;
+          overflow: hidden;
+          display: -webkit-box;
+          text-overflow: ellipsis;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 1;
+        }
+      }
+
+      .ship-unit {
+        width: 200px;
+        text-align: center;
+
+        .text {
+          width: 240px;
+          word-wrap: break-word;
+          white-space: normal;
+          overflow: hidden;
+          display: -webkit-box;
+          text-overflow: ellipsis;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+        }
+      }
+
+      .rp-actions {
+        width: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .ban-btn {
+          width: 50px;
+          height: 28px;
+          font-size: 1.6rem;
+          font-weight: 500;
+          outline: none;
+          margin-right: 5px;
+          border-radius: 3px;
+          border: 1px solid transparent;
+          color: #fff;
+          background-color: red;
+          transition: 0.25s linear;
+
+          &:hover {
+            border: 1px solid red;
+            color: red;
+            background-color: transparent;
+          }
+        }
+
+        .notify-btn {
+          width: 50px;
+          height: 28px;
+          font-size: 1.6rem;
+          font-weight: 500;
+          outline: none;
+          border-radius: 3px;
+          border: 1px solid transparent;
+          color: #fff;
+          background-color: #528dd7;
+          transition: 0.25s linear;
+
+          &:hover {
+            border: 1px solid #528dd7;
+            color: #528dd7;
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+
+  .prev-next {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+
+    .icon-left,
+    .icon-right {
+      outline: none;
+      border: none;
+      background-color: transparent;
+
+      i {
+        font-size: 2.6rem;
+        color: #999999;
+
+        &:hover {
+          color: var(--primary);
+        }
+      }
+    }
+
+    .icon-left {
+      margin-right: 30px;
+    }
+
+    .icon-right {
+      margin-left: 30px;
+    }
+  }
+}

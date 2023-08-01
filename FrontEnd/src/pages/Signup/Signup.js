@@ -1,6 +1,6 @@
 import * as React from "react";
+import { useEffect, useState } from "react";
 import classNames from "classnames/bind";
-import { useState, useEffect } from "react";
 import Backdrop from "@mui/material/Backdrop";
 import CircularProgress from "@mui/material/CircularProgress";
 // import Button from "@mui/material/Button";
@@ -28,6 +28,7 @@ const genders = [
     name: "Other",
   },
 ];
+
 function Signup() {
   const [user, setUser] = useState({
     firstname: undefined,
@@ -44,6 +45,10 @@ function Signup() {
   const [disabled, setDisabled] = useState(true);
   const [passwordType, setPasswordType] = useState("password");
   const [passwordConfirmType, setPasswordConfirmType] = useState("password");
+
+  useEffect(() => {
+    document.title = "Sign up today! | Bird Trading Platform";
+  }, []);
 
   useEffect(() => {
     if (submit) {
@@ -142,7 +147,7 @@ function Signup() {
           subMessage="to verify"
         />
       )}
-      <HeaderForm />
+      <HeaderForm text="Register" />
       {!openModal && (
         <>
           <div className={cx("container")}>
@@ -205,7 +210,9 @@ function Signup() {
                         onClick={togglePassword}
                       >
                         {passwordType === "password" ? (
-                          <i className={cx("icon-password", "bi bi-eye-slash")}></i>
+                          <i
+                            className={cx("icon-password", "bi bi-eye-slash")}
+                          ></i>
                         ) : (
                           <i className={cx("icon-password", "bi bi-eye")}></i>
                         )}
@@ -228,7 +235,9 @@ function Signup() {
                         onClick={togglePasswordConfirm}
                       >
                         {passwordConfirmType === "password" ? (
-                          <i className={cx("icon-password", "bi bi-eye-slash")}></i>
+                          <i
+                            className={cx("icon-password", "bi bi-eye-slash")}
+                          ></i>
                         ) : (
                           <i className={cx("icon-password", "bi bi-eye")}></i>
                         )}

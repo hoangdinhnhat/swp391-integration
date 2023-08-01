@@ -15,13 +15,6 @@ import com.swp391.backend.utils.mail.ConfirmCodeTemplete;
 import com.swp391.backend.utils.mail.EmailSender;
 import com.swp391.backend.utils.mail.ForgetCodeTemplete;
 import com.swp391.backend.utils.mail.SecurityConfirmTemplete;
-import jakarta.servlet.http.Cookie;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
-import java.time.LocalDateTime;
-import java.time.ZoneId;
-import java.util.Date;
-import java.util.UUID;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -31,8 +24,12 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.util.Date;
+import java.util.UUID;
+
 /**
- *
  * @author Lenovo
  */
 @Service
@@ -76,6 +73,7 @@ public class AuthenticationService {
             if (jwtService.isTokenValid(authToken.getValue(), user)) {
                 return AuthenticationResponse.builder()
                         .token(authToken.getValue())
+                        .role(user.getRole().name())
                         .build();
             } else {
                 tokenService.delete(authToken);
@@ -100,6 +98,7 @@ public class AuthenticationService {
         tokenService.save(authToken);
         return AuthenticationResponse.builder()
                 .token(jwtToken)
+                .role(user.getRole().name())
                 .build();
     }
 
@@ -142,9 +141,10 @@ public class AuthenticationService {
                 }
             }
         } else {
+            String lastName = request.getFamily_name() == null ? "" : request.getFamily_name();
             user = User.builder()
                     .firstname(request.getGiven_name())
-                    .lastname(request.getFamily_name())
+                    .lastname(lastName)
                     .email(request.getEmail())
                     .gender(null)
                     .imageurl(request.getPicture())
@@ -152,6 +152,7 @@ public class AuthenticationService {
                     .locked(false)
                     .password(null)
                     .role(Role.CUSTOMER)
+                    .joinAt(new Date())
                     .build();
         }
         UsernamePasswordAuthenticationToken usernameToken = new UsernamePasswordAuthenticationToken(user, null, user.getAuthorities());
@@ -194,6 +195,7 @@ public class AuthenticationService {
                 .imageurl("/api/v1/users/info/avatar")
                 .password(passwordEncoder.encode(request.getPassword()))
                 .role(Role.CUSTOMER)
+                .joinAt(new Date())
                 .build();
         userService.save(user);
         String confToken = UUID.randomUUID().toString();
@@ -248,9 +250,8 @@ public class AuthenticationService {
         if (confToken.getConfirmedAt() != null) {
             throw new IllegalStateException("Email already confirmed");
         }
-        
-        if(confToken.getExpiredAt().isAfter(LocalDateTime.now()))
-        {
+
+        if (confToken.getExpiredAt().isAfter(LocalDateTime.now())) {
             throw new IllegalStateException("The email was sent within minutes. Please double-check your email.");
         }
 
@@ -297,8 +298,8 @@ public class AuthenticationService {
                 .build();
     }
 
-    public ResetResponse resetSend(UserDTO userDTO) throws Exception {
-        User user = (User) userService.loadUserByUsername(userDTO.getEmail());
+    public ResetResponse resetSend(String email) throws Exception {
+        User user = (User) userService.loadUserByUsername(email);
         Token checkToken = tokenService.findByUserAndType(user, "reset");
         if (checkToken != null) {
             tokenService.delete(checkToken);
@@ -322,9 +323,9 @@ public class AuthenticationService {
                 .build();
     }
 
-    public ResetResponse resetConfirm(UserDTO userDTO, String code) {
+    public ResetResponse resetConfirm(String email, String code) {
         String status = "Confirm Succesfully";
-        User user = (User) userService.loadUserByUsername(userDTO.getEmail());
+        User user = (User) userService.loadUserByUsername(email);
         Token resetToken = tokenService.findByUserAndType(user, "reset");
         if (!tokenService.isValid(resetToken)) {
             status = "Confirm code is expired!";
@@ -341,9 +342,9 @@ public class AuthenticationService {
                 .build();
     }
 
-    public ResetResponse resetNew(UserDTO userDTO, String newPass) {
+    public ResetResponse resetNew(String email, String newPass) {
         String status = "Reset Password Succesfully";
-        User user = (User) userService.loadUserByUsername(userDTO.getEmail());
+        User user = (User) userService.loadUserByUsername(email);
         String newPassword = passwordEncoder.encode(newPass);
         user.setPassword(newPassword);
         userService.save(user);

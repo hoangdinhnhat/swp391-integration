@@ -1,0 +1,168 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 8;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+
+  .myAddress_popup {
+    width: 500px;
+    height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255);
+
+    .myAddress-header {
+      width: 100%;
+      height: 56px;
+      padding: 16px 24px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+      color: #000000cc;
+
+      span {
+        font-size: 1.8rem;
+      }
+    }
+
+    .myAddress-content {
+      padding: 0px 24px 80px 24px;
+
+      .myAddress-detail {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+        background-color: #fff;
+
+        .myAddress-info {
+          .name {
+            padding-right: 10px;
+            font-size: 1.6rem;
+            font-weight: 500;
+            color: #000000de;
+          }
+
+          .phone {
+            font-size: 1.4rem;
+            padding-left: 10px;
+            border-left: 0.5px solid rgba(0, 0, 0, 0.26);
+            color: #0000008a;
+          }
+
+          .spec-address,
+          .address {
+            font-size: 1.4rem;
+            line-height: 2.4rem;
+            color: #0000008a;
+          }
+
+          .address {
+            padding-bottom: 5px;
+          }
+
+          .default {
+            width: 70px;
+            padding: 2px 6px;
+            font-size: 1.4rem;
+            color: var(--primary);
+            border: 1px solid var(--primary);
+          }
+        }
+
+        .myAddress-selection {
+          .select,
+          .edit {
+            border: none;
+            outline: none;
+            background-color: transparent;
+            font-size: 1.5rem;
+            color: #0000008a;
+
+            &:hover {
+              color: var(--primary);
+            }
+          }
+
+          .edit {
+            margin-left: 10px;
+          }
+        }
+      }
+
+      .add_newAddress {
+        background-color: transparent;
+        margin-top: 15px;
+        height: 40px;
+        padding: 10px;
+        color: #0000008a;
+        border: 1px solid rgba(0, 0, 0, 0.09);
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.03);
+
+        .plus-icon {
+          color: #0000008a;
+          margin-right: 5px;
+        }
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.02);
+        }
+      }
+    }
+
+    .myAddress-footer {
+      background-color: #fff;
+      border-top: 1px solid rgba(0, 0, 0, 0.09);
+      padding: 0 24px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      .confirm {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        outline: none;
+        width: 120px;
+        padding: 8px 10px;
+        border: 0;
+        background: none;
+        border-radius: 2px;
+        color: #fff;
+        background-color: var(--primary);
+      }
+
+      .cancel {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        outline: none;
+        width: 120px;
+        padding: 8px 10px;
+        border: 0;
+        background: none;
+        border-radius: 2px;
+        margin-right: 10px;
+        color: rgba(0, 0, 0, .65);
+        border: 1px solid rgba(0, 0, 0, .09);
+        background-color: transparent;
+
+        &:hover {
+          background-color: rgba(0, 0, 0, .02);
+        }
+      }
+    }
+  }
+}

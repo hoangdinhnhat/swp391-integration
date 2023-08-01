@@ -3,6 +3,7 @@
   min-height: calc(100vh - 101px);
   display: flex;
   justify-content: center;
+  margin-top: 101px;
   padding: 30px 0 0 0;
 }
 
@@ -55,6 +56,7 @@
 
 .user-name {
   margin-top: 15px;
+
   p {
     font-size: 2rem;
     color: #fff;
@@ -174,11 +176,13 @@
   background: var(--primary);
   transition: 0.5s;
 }
+
 .text input:focus ~ label,
 .text input:valid ~ label {
   top: -5px;
   color: var(--primary);
 }
+
 .text input:focus ~ span::before,
 .text input:valid ~ span::before {
   width: 100%;
@@ -197,6 +201,7 @@
     font-size: 1.9rem;
   }
 }
+
 .gender {
   position: relative;
   display: flex;

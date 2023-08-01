@@ -1,0 +1,97 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+
+  .checkout-popup {
+    width: 500px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 4px 4px 70px 10px rgb(0 0 0/11%);
+    border-radius: 5px;
+    background-color: #fff;
+
+    .checkout-content {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .header {
+        margin-bottom: 20px;
+
+        .check-icon {
+          padding: 8px;
+          border-radius: 50%;
+          margin-right: 10px;
+          color: #fff;
+          background-color: var(--primary);
+        }
+
+        .title {
+          font-size: 2rem;
+          color: var(--primary);
+        }
+      }
+
+      .content {
+        margin-bottom: 20px;
+      }
+
+      .options {
+        margin-top: 20px;
+
+        .home {
+          font-size: 1.4rem;
+          padding: 10px 71px;
+          border-radius: 4px;
+          margin-right: 10px;
+          text-decoration: none;
+          border: none;
+          outline: none;
+          border: 1px solid var(--primary);
+          color: #fff;
+          background-color: var(--primary);
+
+          &:hover {
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            background-color: transparent;
+          }
+        }
+
+        .order {
+          font-size: 1.4rem;
+          padding: 10px 40px;
+          border-radius: 4px;
+          margin-left: 10px;
+          text-decoration: none;
+          border: none;
+          outline: none;
+          border: 1px solid var(--primary);
+          color: #fff;
+          background-color: var(--primary);
+
+          &:hover {
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+}

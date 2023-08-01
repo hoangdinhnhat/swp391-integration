@@ -1,0 +1,86 @@
+.container {
+  width: 100%;
+  display: flex;
+  margin-top: 71px;
+}
+
+.sidebar {
+  width: 198px;
+}
+
+.nav-bar {
+  background-color: #fff;
+}
+
+.user-container {
+  width: calc(100% - 198px);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #f6f6f6;
+}
+
+.user-table {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.row-status {
+  background-color: red;
+}
+
+.available-status {
+  width: 100px;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 300;
+  border: 0.5px solid rgb(57, 181, 136);
+  background-color: rgb(235, 249, 244);
+  border-radius: 3px;
+  color: green;
+  text-align: center;
+}
+
+.banned-status {
+  width: 100px;
+  margin: 0;
+  font-size: 15px;
+  border: 0.5px solid red;
+  background-color: #ffe1e1;
+  border-radius: 3px;
+  color: red;
+  text-align: center;
+  padding: 3px 0;
+}
+
+.ban_btn {
+  width: 100px;
+  padding: 3px;
+  border: none;
+  background-color: #ed1c24;
+  color: white;
+  border-radius: 3px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.input-search {
+  display: flex;
+  justify-content: end;
+}
+
+.skw {
+  width: 500px;
+  height: 40px;
+  font-size: 1.4rem;
+  padding: 0 12px;
+  border-radius: 0 4px 4px 0;
+  outline: none;
+  border: 1px solid #e5e5e5;
+  margin-bottom: 30px;
+}
+
+.avatar-img {
+  width: 65px;
+}

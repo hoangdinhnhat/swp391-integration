@@ -3,6 +3,7 @@
   min-height: calc(100vh - 101px);
   display: flex;
   justify-content: center;
+  margin-top: 101px;
   padding: 30px 0 0 0;
 }
 
@@ -55,6 +56,7 @@
 
 .user-name {
   margin-top: 15px;
+
   p {
     font-size: 2rem;
     color: #fff;
@@ -94,7 +96,7 @@
 }
 
 .nav-active:hover {
-  color: #fff;  
+  color: #fff;
 }
 
 .nav-text {
@@ -105,7 +107,7 @@
 .right-content {
   flex-basis: 75%;
   margin: 0 85px;
-  
+
 }
 
 .right-content-head {
@@ -172,7 +174,7 @@
   }
 }
 
-.address-name, .address-phone{
+.address-name, .address-phone {
   margin-top: 8px;
 }
 

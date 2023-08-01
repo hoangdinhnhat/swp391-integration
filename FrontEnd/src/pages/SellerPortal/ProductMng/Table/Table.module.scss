@@ -1,0 +1,144 @@
+.table_data {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .table-head {
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    background-color: #f6f6f6;
+
+    .head-product {
+      width: 400px;
+    }
+
+    .head-price,
+    .head-quantity,
+    .head-status {
+      width: 180px;
+    }
+
+    .head-edit,
+    .head-delete {
+      width: 90px;
+      text-align: center;
+    }
+  }
+
+  .table-content {
+    .table-body {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 16px;
+
+      .body-product {
+        width: 400px;
+        display: flex;
+        align-items: center;
+
+        .product-img {
+          width: 80px;
+          height: 100%;
+        }
+
+        .product-name {
+          width: 270px;
+          height: 24px;
+          margin-left: 15px;
+          word-wrap: break-word;
+          white-space: normal;
+          overflow: hidden;
+          display: -webkit-box;
+          text-overflow: ellipsis;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 1;
+        }
+      }
+
+      .body-price,
+      .body-quantity,
+      .body-status {
+        width: 180px;
+      }
+
+      .body-status {
+        .inside-status {
+          width: 90px;
+          padding: 3px 10px;
+          font-size: 1.4rem;
+          border-radius: 5px;
+          border: 1px solid;
+          text-align: center;
+        }
+      }
+
+      .body-edit,
+      .body-delete {
+        width: 90px;
+        text-align: center;
+      }
+
+      .body-edit {
+        .edit-btn {
+          border: none;
+          outline: none;
+          background-color: transparent;
+          padding: 5px;
+
+          .edit-icon {
+            font-size: 2rem;
+          }
+        }
+      }
+
+      .body-delete {
+        .delete-btn {
+          border: none;
+          outline: none;
+          background-color: transparent;
+          padding: 5px;
+
+          .delete-icon {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+
+    .prev-next {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 0;
+
+      .icon-left,
+      .icon-right {
+        outline: none;
+        border: none;
+        background-color: transparent;
+
+        i {
+          font-size: 2.8rem;
+          color: #999999;
+
+          &:hover {
+            color: var(--primary);
+          }
+        }
+      }
+
+      .icon-left {
+        margin-right: 30px;
+      }
+
+      .icon-right {
+        margin-left: 30px;
+      }
+    }
+  }
+}

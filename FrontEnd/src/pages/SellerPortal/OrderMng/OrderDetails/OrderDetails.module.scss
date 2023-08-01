@@ -1,0 +1,207 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+
+  .order-details-popup {
+    width: 620px;
+    height: 95%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 4px 4px 70px 10px rgb(0 0 0/11%);
+    background-color: #fff;
+
+    .order-detail-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 20px;
+      border-bottom: 1px solid #e5e5e5;
+
+      .header {
+        display: flex;
+        align-items: center;
+
+        .title {
+          font-size: 2.3rem;
+          font-weight: 500;
+        }
+
+        .orderId {
+          font-size: 1.8rem;
+          margin-left: 15px;
+          color: #494949;
+        }
+      }
+
+      .close {
+        .close-btn {
+          width: 30px;
+          height: 30px;
+          font-size: 2.4rem;
+          border: none;
+          outline: none;
+          background-color: transparent;
+        }
+      }
+    }
+
+    .order-detail-container {
+      width: 100%;
+      height: calc(100% - 67.5px);
+      padding: 16px;
+
+      .user-information {
+        margin-bottom: 10px;
+        padding: 12px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+        .detail-user {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding-bottom: 10px;
+          border-bottom: 1px solid #c2c2c2;
+
+          .user-info {
+            display: flex;
+            align-items: center;
+
+            .user-name {
+              font-weight: 500;
+              padding-right: 10px;
+              border-right: 1px solid #e6e6e6;
+            }
+
+            .phone-number {
+              padding-left: 10px;
+              font-size: 1.5rem;
+            }
+          }
+
+          .contact-user {
+            .chat-btn {
+              width: 70px;
+              height: 25px;
+              font-size: 1.4rem;
+              outline: none;
+              border-radius: 3px;
+              border: 1px solid #333;
+              color: #333;
+              background-color: transparent;
+
+              &:hover {
+                border: 1px solid var(--primary);
+                color: var(--primary);
+              }
+            }
+          }
+        }
+
+        .shipping-detail {
+          display: flex;
+          justify-content: space-between;
+          padding: 10px 0 0px 0;
+
+          .left {
+            .shipping-to {
+              font-size: 1.4rem;
+              padding-bottom: 5px;
+            }
+
+            .shipping-address {
+              font-size: 1.4rem;
+              color: #999999;
+            }
+          }
+        }
+      }
+
+      .order-detail_list {
+        height: calc(100% - 117px);
+        overflow: scroll;
+        padding: 12px;
+
+        .order-detail {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          margin-bottom: 20px;
+
+          .img-detail {
+            width: 70px;
+            height: 70px;
+            margin-right: 10px;
+          }
+
+          .product-info {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            .left {
+              .product-name {
+                width: 400px;
+                font-size: 1.4rem;
+                word-wrap: break-word;
+                white-space: normal;
+                overflow: hidden;
+                display: -webkit-box;
+                text-overflow: ellipsis;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 1;
+              }
+            }
+
+            .right {
+              .price {
+                color: #333;
+              }
+            }
+          }
+        }
+
+        .approve {
+          padding: 2px 5px;
+          border: 1px solid var(--primary);
+          outline: none;
+          color: #fff;
+          background-color: var(--primary);
+          transition: 0.25s ease-in;
+
+          &:hover {
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            background-color: transparent;
+          }
+        }
+
+        .reject {
+          padding: 2px 5px;
+          border: 1px solid red;
+          outline: none;
+          color: #fff;
+          margin-left: 15px;
+          background-color: red;
+          transition: 0.25s ease-in;
+
+          &:hover {
+            border: 1px solid red;
+            color: red;
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+}

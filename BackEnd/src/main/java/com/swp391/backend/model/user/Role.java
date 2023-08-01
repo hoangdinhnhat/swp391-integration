@@ -5,12 +5,11 @@
 package com.swp391.backend.model.user;
 
 /**
- *
  * @author Lenovo
  */
 public enum Role {
     ADMIN,
     CUSTOMER,
-    GUEST,
-    STAFF
+    STAFF,
+    SHIPPING_UNIT
 }

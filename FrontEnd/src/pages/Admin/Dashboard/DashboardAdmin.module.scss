@@ -1,0 +1,413 @@
+/*-------------------------------------DASHBOARD-------------------------------------*/
+.container {
+  width: 100%;
+  height: calc(148vh - 71px);
+  display: flex;
+  margin-top: 71px;
+}
+
+.sidebar {
+  width: 198px;
+}
+
+.dashboard-container {
+  width: calc(100% - 198px);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  background-color: #f6f6f6;
+
+  .dashboard-items {
+    width: 1300px;
+  }
+}
+
+/*-------------------------------------CARD-------------------------------------*/
+.card-items {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  column-gap: 20px;
+  margin-bottom: 25px;
+
+  .item1 {
+    width: 100%;
+    border-left: 3px solid var(--primary);
+
+    .card-title {
+      color: var(--primary);
+    }
+
+    .card-number {
+      color: var(--primary);
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.38);
+    }
+
+    .details-chart {
+      width: 800px;
+      height: max-content;
+      z-index: 5;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+      .details-content {
+        width: 100%;
+        height: 700px;
+        padding: 20px;
+        background-color: #fff;
+
+        .header-content {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        .close-btn {
+          font-size: 20px;
+          margin-bottom: 10px;
+          color: var(--primary);
+        }
+
+        .text {
+          font-size: 23px;
+          font-weight: 500;
+          color: var(--primary);
+        }
+
+        .data-chart {
+          width: 100%;
+          height: 500px;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+
+  .item2 {
+    width: 100%;
+    border-left: 3px solid #008ffb;
+    color: #008ffb;
+
+    .card-title {
+      color: #008ffb;
+    }
+
+    .card-number {
+      color: #008ffb;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.38);
+    }
+
+    .details-chart {
+      width: 800px;
+      height: max-content;
+      z-index: 5;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+      .details-content {
+        width: 100%;
+        height: 700px;
+        padding: 20px;
+        background-color: #fff;
+
+        .header-content {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        .close-btn {
+          font-size: 20px;
+          margin-bottom: 10px;
+        }
+
+        .text {
+          font-size: 23px;
+          font-weight: 500;
+        }
+
+        .data-chart {
+          width: 100%;
+          height: 500px;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+
+  .item3 {
+    width: 100%;
+    border-left: 3px solid #feb019;
+    color: #feb019;
+
+    .card-title {
+      color: #feb019;
+    }
+
+    .card-number {
+      color: #feb019;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.38);
+    }
+
+    .details-chart {
+      width: 800px;
+      height: max-content;
+      z-index: 5;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+      .details-content {
+        width: 100%;
+        height: 700px;
+        padding: 20px;
+        background-color: #fff;
+
+        .header-content {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        .close-btn {
+          font-size: 20px;
+          margin-bottom: 10px;
+        }
+
+        .text {
+          font-size: 23px;
+          font-weight: 500;
+        }
+
+        .data-chart {
+          width: 100%;
+          height: 500px;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+
+  .item4 {
+    width: 100%;
+    border-left: 3px solid #ff4560;
+    color: #ff4560;
+
+    .card-title {
+      color: #ff4560;
+    }
+
+    .card-number {
+      color: #ff4560;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.38);
+    }
+
+    .details-chart {
+      width: 800px;
+      height: max-content;
+      z-index: 5;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+      .details-content {
+        width: 100%;
+        height: 700px;
+        padding: 20px;
+        background-color: #fff;
+
+        .header-content {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        .close-btn {
+          font-size: 20px;
+          margin-bottom: 10px;
+        }
+
+        .text {
+          font-size: 23px;
+          font-weight: 500;
+        }
+
+        .data-chart {
+          width: 100%;
+          height: 500px;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
+
+.card-item {
+  border-radius: 4px;
+  padding: 20px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  background-color: #fff;
+  cursor: pointer;
+
+  p {
+    padding: 0;
+    margin: 0;
+  }
+
+  .card-title {
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  .card-number {
+    font-size: 22px;
+    font-weight: 500;
+  }
+}
+
+.card-statistics {
+  position: relative;
+
+  svg {
+    width: 8rem;
+    height: 8rem;
+  }
+}
+
+/*-------------------------------------CHART-------------------------------------*/
+.overview-chart {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: space-between;
+}
+
+//Revenue
+.revenue-chart {
+  width: 64%;
+  height: 100%;
+  padding: 16px;
+  background-color: #fff;
+
+  .text {
+    font-size: 23px;
+    font-weight: 500;
+  }
+
+  .data-chart {
+    width: 100%;
+    height: 413px;
+    margin-top: 20px;
+  }
+}
+
+//Total Products
+.totalCat-chart {
+  width: 35%;
+  height: 100%;
+  padding: 16px;
+  background-color: #fff;
+
+  .text {
+    font-size: 23px;
+    font-weight: 500;
+  }
+
+  .data-chart {
+    width: 100%;
+    height: 413px;
+    margin-top: 20px;
+  }
+}
+
+//Detail
+.detailCat-chart {
+  width: 100%;
+  height: 700px;
+  padding: 16px;
+  margin-top: 20px;
+  background-color: #fff;
+
+  .text {
+    font-size: 23px;
+    font-weight: 500;
+  }
+
+  .data-chart {
+    width: 100%;
+    height: 613px;
+    margin-top: 20px;
+  }
+}

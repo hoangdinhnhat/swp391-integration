@@ -6,7 +6,7 @@ import styles from "./HeaderForm.module.scss";
 
 const cx = classNames.bind(styles);
 
-function HeaderForm() {
+function HeaderForm({ text = "" }) {
   return (
     <div className={cx("header")}>
       <div className={cx("header-content")}>
@@ -18,6 +18,7 @@ function HeaderForm() {
               <span className={cx("sub-text")}>T</span>rading
             </span>
           </p>
+          <div className={cx("otherText")}>{text}</div>
         </Link>
       </div>
     </div>

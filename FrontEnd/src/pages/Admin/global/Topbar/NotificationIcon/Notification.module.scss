@@ -1,0 +1,121 @@
+.notifications {
+  margin-left: 25px;
+  cursor: pointer;
+  position: relative;
+  width: 2.6rem;
+  height: 2.6rem;
+
+  .count-notify {
+    user-select: none;
+    position: absolute;
+    bottom: 1.8rem;
+    left: 0.7rem;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 25px;
+    color: #fff;
+    background: #f97b22;
+  }
+
+  .dropdown-notify {
+    .bell-icon {
+      font-size: 2rem;
+      color: #333;
+    }
+  }
+
+  .notify-items {
+    width: 400px;
+
+    .no-notify {
+      margin-top: 10px;
+      padding: 10px;
+      color: rgba(0, 0, 0, 0.685);
+      background-color: white;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      text-align: center;
+
+      img {
+        width: 80px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 15px;
+      }
+    }
+
+    .dropdown_container {
+      margin-top: 10px;
+
+      .notify-head {
+        width: 100%;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+        font-size: 1.4rem;
+        color: #00000042;
+      }
+
+      .notify-container {
+        width: 100%;
+        height: 340px;
+
+        .notify-content {
+          width: 100%;
+          padding: 8px 10px;
+          display: flex;
+
+          &:hover {
+            background-color: #f8f8f8;
+          }
+
+          .notify-img {
+            width: 40px;
+            height: 40px;
+          }
+
+          .notify-info {
+            margin-left: 10px;
+
+            .title-notify {
+              font-size: 1.4rem;
+              color: #000000cc;
+            }
+
+            .notify-desc {
+              font-size: 1.2rem;
+              word-wrap: break-word;
+              white-space: normal;
+              overflow: hidden;
+              display: -webkit-box;
+              text-overflow: ellipsis;
+              -webkit-box-orient: vertical;
+              -webkit-line-clamp: 1;
+              color: #0000008a;
+            }
+          }
+        }
+      }
+
+      .notify-footer {
+        padding: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .view-all {
+          text-decoration: none;
+          font-size: 1.4rem;
+          color: #000000cc;
+        }
+      }
+    }
+  }
+}

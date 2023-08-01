@@ -1,1 +1,1 @@
-export { default } from './HeaderForm'
+export {default} from './HeaderForm'

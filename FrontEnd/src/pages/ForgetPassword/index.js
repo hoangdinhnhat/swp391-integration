@@ -20,6 +20,10 @@ function ForgetPassword() {
   let CurStep = steps[step];
 
   useEffect(() => {
+    document.title = "Reset your password! | Bird Trading Platform";
+  }, []);
+
+  useEffect(() => {
     if (arg) {
       switch (step) {
         case 0:
@@ -33,29 +37,27 @@ function ForgetPassword() {
               setLoading(false);
             })
             .catch((err) => {
+              console.log(err);
               setLoading(false);
               setErrMsg(err.response.data.message);
             });
           break;
         case 1:
           axios
-            .post("/api/v1/auths/reset/confirm", user, {
-              params: { code: arg.code },
-            })
+            .post("/api/v1/auths/reset/confirm?email=" + user.email + "&code=" + arg.code)
             .then((res) => {
               setLoading(false);
               setStep((step) => step + 1);
             })
             .catch((e) => {
+              console.log(e);
               setLoading(false);
               setErrMsg(e.response.data.message);
             });
           break;
         case 2:
           axios
-            .post("/api/v1/auths/reset/new", user, {
-              params: { password: arg.confirm },
-            })
+            .post("/api/v1/auths/reset/new?email=" + user.email + "&password=" + arg.confirm)
             .then((res) => {
               console.log(res);
               navigate("/login");
@@ -73,14 +75,15 @@ function ForgetPassword() {
 
   useEffect(() => {
     if (user) {
-      axios.post("/api/v1/auths/reset/send", user)
-      .then((res) => {
-        console.log(res);
-      });
+      axios
+        .post("/api/v1/auths/reset/send?email=" + user.email)
+        .then((res) => {
+          console.log(res);
+        })
+        .catch((e) => console.log(e));
     }
   }, [user]);
 
-  
   const handleSubmit = (e, args) => {
     e.preventDefault();
     setLoading(true);
@@ -91,7 +94,7 @@ function ForgetPassword() {
 
   return (
     <>
-      <HeaderForm />
+      <HeaderForm text="Forget Password" />
       <CurStep
         onClick={handleSubmit}
         errMsg={errMsg}

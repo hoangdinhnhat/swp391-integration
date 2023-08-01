@@ -6,7 +6,6 @@
 package com.swp391.backend.utils.mail;
 
 /**
- *
  * @author Lenovo
  */
 public class ConfirmCodeTemplete {
@@ -166,7 +165,7 @@ public class ConfirmCodeTemplete {
                 + "                                    alt=\"\"\n"
                 + "                                    title=\"\"\n"
                 + "                                    height=\"50px\"\n"
-                + "                                    src=\"https://scontent.fsgn2-7.fna.fbcdn.net/v/t1.15752-9/346101199_1328080261251456_704606386658241927_n.png?_nc_cat=108&ccb=1-7&_nc_sid=ae9488&_nc_ohc=OReRoZIpvroAX-xIwad&_nc_ht=scontent.fsgn2-7.fna&oh=03_AdTs3H4Asi5GWtSISUnb1QLaSg8_4PXqp5ebIkvZLyuEmQ&oe=648C0EE9\"\n"
+                + "                                    src=\"https://lh3.googleusercontent.com/u/0/drive-viewer/AITFw-wX4c-qhgOoMWkaCQhxpgDUGzMqxDZ2BhLmPMUn8143D2yTDPtKUGBmnSFGnrOSbioU1Lm34dXcEWFT53fsBEyLvY8G=w1865-h958\"\n"
                 + "                                    style=\"\n"
                 + "                                      border: none;\n"
                 + "                                      border-radius: ;\n"
@@ -248,7 +247,7 @@ public class ConfirmCodeTemplete {
                 + "                    text-align: center;\n"
                 + "                  \"\n"
                 + "                >\n"
-                + "                  Welcome to " + platform +"!\n"
+                + "                  Welcome to " + platform + "!\n"
                 + "                </div>\n"
                 + "              </td>\n"
                 + "            </tr>\n"
@@ -335,7 +334,7 @@ public class ConfirmCodeTemplete {
                 + "                                letter-spacing: 0.27px;\n"
                 + "                              \"\n"
                 + "                            >\n"
-                + "                              Hey "+ firstname +",\n"
+                + "                              Hey " + firstname + ",\n"
                 + "                            </h2>\n"
                 + "                            <p>\n"
                 + "                              Wowwee! Thanks for registering an account in Bird\n"
@@ -639,7 +638,7 @@ public class ConfirmCodeTemplete {
                 + "                            text-align: center;\n"
                 + "                          \"\n"
                 + "                        >\n"
-                + "                          Sent by "+ platform +" •\n"
+                + "                          Sent by " + platform + " •\n"
                 + "                          <a\n"
                 + "                            href=\"/github\"\n"
                 + "                            style=\"color: #1eb0f4; text-decoration: none\"\n"

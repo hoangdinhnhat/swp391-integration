@@ -1,0 +1,239 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.38);
+}
+
+.addr-popup {
+  width: 700px;
+  height: 700px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 4px 4px 70px 10px rgb(0 0 0/11%);
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.addr-container {
+  padding: 30px;
+}
+
+.popup-head {
+  margin-top: 10px;
+  margin-bottom: 30px;
+
+  .popup-head-text {
+    font-size: 2.6rem;
+    font-weight: 500;
+    color: var(--primary);
+  }
+}
+
+.popup-content {
+  width: 100%;
+
+  .addr-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+
+    .addr-field {
+      position: relative;
+
+      input {
+        border-radius: 5px;
+        outline: none;
+        border: 1px solid #eee;
+        width: 310px;
+        height: 50px;
+        padding: 0 20px;
+        transition: 0.25s ease;
+
+        &:focus {
+          border-color: var(--primary);
+        }
+      }
+
+      input:not(:placeholder-shown) + label,
+      input:focus + label {
+        top: 0;
+        left: 11px;
+        padding: 0 10px;
+        display: inline-block;
+        background-color: #fff;
+        color: var(--primary);
+      }
+
+      label {
+        position: absolute;
+        top: 50%;
+        left: 21px;
+        transform: translateY(-50%);
+        color: #aaaa;
+        user-select: none;
+        pointer-events: none;
+        transition: 0.25s ease;
+      }
+    }
+  }
+}
+
+.addr-detail {
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  .addr-field {
+    position: relative;
+
+    input {
+      border-radius: 5px;
+      outline: none;
+      border: 1px solid #eee;
+      width: 200px;
+      height: 50px;
+      padding: 0 20px;
+      transition: 0.25s ease;
+
+      &:focus {
+        border-color: var(--primary);
+      }
+    }
+
+    input:not(:placeholder-shown) + label,
+    input:focus + label {
+      top: 0;
+      left: 11px;
+      padding: 0 10px;
+      display: inline-block;
+      background-color: #fff;
+      color: var(--primary);
+    }
+
+    label {
+      position: absolute;
+      top: 50%;
+      left: 21px;
+      transform: translateY(-50%);
+      color: #aaaa;
+      user-select: none;
+      pointer-events: none;
+      transition: 0.25s ease;
+    }
+  }
+}
+
+.province-list {
+  width: 220px;
+  height: 300px;
+  overflow-y: scroll;
+}
+
+.province-item {
+  cursor: pointer;
+  padding: 10px;
+
+  &:hover {
+    background-color: rgba(22, 24, 35, .06);
+  }
+}
+
+.specific-add {
+  width: 100%;
+  margin-top: 70px;
+
+  .addr-field {
+    position: relative;
+
+    input {
+      border-radius: 5px;
+      outline: none;
+      border: 1px solid #eee;
+      width: 100%;
+      height: 50px;
+      padding: 0 20px;
+      transition: 0.25s ease;
+
+      &:focus {
+        border-color: var(--primary);
+      }
+    }
+
+    input:not(:placeholder-shown) + label,
+    input:focus + label {
+      top: 0;
+      left: 11px;
+      padding: 0 10px;
+      display: inline-block;
+      background-color: #fff;
+      color: var(--primary);
+    }
+
+    label {
+      position: absolute;
+      top: 50%;
+      left: 21px;
+      transform: translateY(-50%);
+      color: #aaaa;
+      user-select: none;
+      pointer-events: none;
+      transition: 0.25s ease;
+    }
+  }
+}
+
+
+.popup-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 30px;
+}
+
+.p-btn {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.cancel {
+  width: 80px;
+  margin-right: 10px;
+  border: 1px solid transparent;
+  background-color: #e7e7e7aa;
+}
+
+.cancel:hover {
+  border: 1px solid #333;
+  background-color: transparent;
+}
+
+.update {
+  width: 80px;
+  border: 1px solid transparent;
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.update:hover {
+  border: 1px solid var(--primary);
+  background-color: transparent;
+  color: var(--primary);
+}

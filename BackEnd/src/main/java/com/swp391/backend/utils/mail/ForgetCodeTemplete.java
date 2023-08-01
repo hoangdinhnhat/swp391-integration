@@ -6,7 +6,6 @@
 package com.swp391.backend.utils.mail;
 
 /**
- *
  * @author Lenovo
  */
 public class ForgetCodeTemplete {
@@ -164,7 +163,7 @@ public class ForgetCodeTemplete {
                 + "                                    alt=\"\"\n"
                 + "                                    title=\"\"\n"
                 + "                                    height=\"50px\"\n"
-                + "                                    src=\"https://scontent.fsgn2-7.fna.fbcdn.net/v/t1.15752-9/346101199_1328080261251456_704606386658241927_n.png?_nc_cat=108&ccb=1-7&_nc_sid=ae9488&_nc_ohc=OReRoZIpvroAX-xIwad&_nc_ht=scontent.fsgn2-7.fna&oh=03_AdTs3H4Asi5GWtSISUnb1QLaSg8_4PXqp5ebIkvZLyuEmQ&oe=648C0EE9\"\n"
+                + "                                    src=\"https://lh3.googleusercontent.com/u/0/drive-viewer/AITFw-wX4c-qhgOoMWkaCQhxpgDUGzMqxDZ2BhLmPMUn8143D2yTDPtKUGBmnSFGnrOSbioU1Lm34dXcEWFT53fsBEyLvY8G=w1865-h958\"\n"
                 + "                                    style=\"\n"
                 + "                                      border: none;\n"
                 + "                                      border-radius: ;\n"
@@ -334,11 +333,11 @@ public class ForgetCodeTemplete {
                 + "                                letter-spacing: 0.27px;\n"
                 + "                              \"\n"
                 + "                            >\n"
-                + "                              Hi "+ firstname +",\n"
+                + "                              Hi " + firstname + ",\n"
                 + "                            </h2>\n"
                 + "                            <p>\n"
                 + "                              We received a request to reset your password for\n"
-                + "                              your account on <b>"+ platform +"</b>.\n"
+                + "                              your account on <b>" + platform + "</b>.\n"
                 + "                            </p>\n"
                 + "                            <p>\n"
                 + "                              If you did not request a password reset, please\n"
@@ -358,7 +357,7 @@ public class ForgetCodeTemplete {
                 + "                              to contact us.\n"
                 + "                            </p>\n"
                 + "                            <p>Thank you,</p>\n"
-                + "                            <p><b>The "+ platform +" Team</b></p>\n"
+                + "                            <p><b>The " + platform + " Team</b></p>\n"
                 + "                            <p>\n"
                 + "                              To reset your password, please enter the following\n"
                 + "                              code on the password reset page:\n"
@@ -414,7 +413,7 @@ public class ForgetCodeTemplete {
                 + "                                    \"\n"
                 + "                                    target=\"_blank\"\n"
                 + "                                  >\n"
-                + "                                    "+ confirmCode +"\n"
+                + "                                    " + confirmCode + "\n"
                 + "                                  </div>\n"
                 + "                                </td>\n"
                 + "                              </tr>\n"

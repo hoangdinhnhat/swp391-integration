@@ -1,0 +1,44 @@
+.report_wrapper {
+  width: 100%;
+  height: calc(100vh - 71px);
+  display: flex;
+  margin-top: 71px;
+
+  .report_sidebar {
+    width: 198px;
+  }
+
+  .report_container {
+    width: calc(100% - 198px);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #f6f6f6;
+
+    .report-content {
+      width: 1300px;
+      height: fit-content;
+      margin-top: 20px;
+      background-color: #fff;
+
+      .report-nav {
+        width: 100%;
+        padding: 20px;
+
+        .nav-btn {
+          width: 200px;
+          height: 50px;
+          border: none;
+          outline: none;
+          background-color: transparent;
+          border-bottom: 3px solid transparent;
+        }
+
+        .active {
+          color: var(--primary);
+          border-bottom: 3px solid var(--primary);
+        }
+      }
+    }
+  }
+}

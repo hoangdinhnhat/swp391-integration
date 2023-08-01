@@ -1,0 +1,16 @@
+.rating-star {
+  margin-right: 5px;
+  padding: 4px 0;
+  position: relative;
+  white-space: nowrap;
+
+  .overlay {
+    background: #fff;
+    height: 100%;
+    overflow: hidden;
+    mix-blend-mode: color;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}

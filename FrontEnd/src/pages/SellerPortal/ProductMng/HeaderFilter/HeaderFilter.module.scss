@@ -1,0 +1,22 @@
+.header {
+  position: relative;
+  height: 50px;
+
+  .back-btn {
+    width: 50px;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .header-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+}

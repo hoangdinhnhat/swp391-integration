@@ -1,0 +1,22 @@
+.purchase_header-nav {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+
+  .nav {
+    width: 150px;
+    text-align: center;
+    padding: 16px 0;
+    text-decoration: none;
+    color: #000000cc;
+
+    &:hover {
+      color: var(--primary);
+    }
+  }
+
+  .nav-active {
+    color: var(--primary);
+    border-bottom: 3px solid var(--primary);
+  }
+}

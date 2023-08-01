@@ -1,1 +1,1 @@
-export { default } from './AddressPopup'
+export {default} from './AddressPopup'

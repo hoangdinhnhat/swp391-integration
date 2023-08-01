@@ -10,9 +10,11 @@
   width: 500px;
   background-color: #fff;
 }
+
 .head-text {
   margin-bottom: 30px;
 }
+
 .head-text p {
   text-align: center;
   color: var(--primary);
@@ -20,9 +22,11 @@
   font-weight: 500;
   margin-bottom: 20px;
 }
+
 .info {
   width: 100%;
 }
+
 .text-content {
   display: flex;
 }
@@ -79,11 +83,13 @@ input[type="password"]::-ms-clear {
   background: var(--primary);
   transition: 0.5s;
 }
+
 .text input:focus ~ label,
 .text input:valid ~ label {
   top: -5px;
   color: var(--primary);
 }
+
 .text input:focus ~ span::before,
 .text input:valid ~ span::before {
   width: 100%;
@@ -133,7 +139,7 @@ input[type="password"]::-ms-clear {
 
 .btn-submit button[disabled] {
   opacity: 0.6;
-  cursor: default;
+  cursor: not-allowed;
 }
 
 .btn-submit button[disabled]:hover {
@@ -157,6 +163,7 @@ input[type="password"]::-ms-clear {
     color: var(--primary);
   }
 }
+
 .gender-form {
   display: flex;
   justify-content: space-between;
@@ -170,6 +177,7 @@ input[type="password"]::-ms-clear {
     font-size: 1.9rem;
   }
 }
+
 .gender {
   position: relative;
   display: flex;

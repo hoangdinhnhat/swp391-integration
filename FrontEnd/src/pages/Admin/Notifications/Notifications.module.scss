@@ -1,0 +1,123 @@
+.notify_wrapper {
+  width: 100%;
+  height: calc(100vh - 71px);
+  display: flex;
+  margin-top: 71px;
+
+  .notify_sidebar {
+    width: 198px;
+  }
+
+  .notify_container {
+    width: calc(100% - 198px);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #f6f6f6;
+
+    .notify_content {
+      width: var(--width);
+      height: fit-content;
+      margin-top: 20px;
+      padding: 20px 24px 0 24px;
+      background-color: #fff;
+
+      .notify-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #e5e5e5;
+
+        .title {
+          font-size: 2.4rem;
+          font-weight: 500;
+        }
+
+        .read {
+          .read-btn {
+            font-size: 1.4rem;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            color: #0000008a;
+          }
+        }
+      }
+
+      .notify-list {
+        .notify {
+          cursor: pointer;
+          display: flex;
+          padding: 20px;
+
+          &:hover {
+            background-color: #f8f8f8;
+          }
+
+          .notify-img {
+            width: 60px;
+            height: 60px;
+            margin-right: 20px;
+          }
+
+          .notify-info {
+            .title-notify {
+              margin-bottom: 5px;
+            }
+
+            .notify-desc {
+              margin-bottom: 5px;
+              font-size: 1.4rem;
+              color: #0000008a;
+              word-wrap: break-word;
+              white-space: normal;
+              overflow: hidden;
+              display: -webkit-box;
+              text-overflow: ellipsis;
+              -webkit-box-orient: vertical;
+              -webkit-line-clamp: 2;
+            }
+
+            .notify-date-time {
+              font-size: 1.4rem;
+              color: #0000008a;
+            }
+          }
+        }
+      }
+
+      .prev-next {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
+
+        .icon-left,
+        .icon-right {
+          outline: none;
+          border: none;
+          background-color: transparent;
+
+          i {
+            font-size: 2.8rem;
+            color: #999999;
+
+            &:hover {
+              color: var(--primary);
+            }
+          }
+        }
+
+        .icon-left {
+          margin-right: 30px;
+        }
+
+        .icon-right {
+          margin-left: 30px;
+        }
+      }
+    }
+  }
+}
